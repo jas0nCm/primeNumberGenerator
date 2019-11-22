@@ -11,6 +11,14 @@ class PrimeNumberGeneratorImplTest {
     }
 
     @Test
-    void isPrime() {
+    void isPrime_trivialCases() {
+        PrimeNumberGenerator primeGen= new PrimeNumberGeneratorImpl();
+        assertFalse(primeGen.isPrime(-5));
+        assertFalse(primeGen.isPrime(0));
+
+        assertTrue(primeGen.isPrime(1));
+        assertTrue(primeGen.isPrime(2));
+
+        assertFalse(primeGen.isPrime(1000));
     }
 }

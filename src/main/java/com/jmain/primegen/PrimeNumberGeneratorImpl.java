@@ -10,6 +10,11 @@ public class PrimeNumberGeneratorImpl implements PrimeNumberGenerator {
 
     @Override
     public boolean isPrime(int value) {
+        if (value > 0 && value <= 2)
+            return true;
+        if (value % 2 == 0)
+            return false;
+
         return false;
     }
 }
