@@ -18,6 +18,14 @@ public class PrimeNumberGeneratorImpl implements PrimeNumberGenerator {
         if (value % 2 == 0)
             return false;
 
-        return false;
+        int[] decomposedValue = MathHelpers.decomposeValue(value);
+        int exponent = decomposedValue[0];
+        int limit = decomposedValue[1];
+        for (int i = 0; i < iterations; i++) {
+            if (MathHelpers.testValueCompositeness(exponent, limit, value) == true)
+                return false;
+        }
+
+        return true;
     }
 }
