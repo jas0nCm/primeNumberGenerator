@@ -12,4 +12,10 @@ class MathHelpersTest {
         assertEquals(25, decomposedValue[0]);
         assertEquals(2, decomposedValue[1]);
     }
+
+    @Test
+    void modGen() {
+        int testValue = MathHelpers.modPow(17, 11, 97);
+        assertEquals(38, testValue);
+    }
 }
