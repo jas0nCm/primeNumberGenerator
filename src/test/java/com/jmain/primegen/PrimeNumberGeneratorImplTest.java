@@ -18,6 +18,7 @@ class PrimeNumberGeneratorImplTest {
         assertFalse(primeGen.isPrime(1));
 
         assertTrue(primeGen.isPrime(2));
+        assertTrue(primeGen.isPrime(3));
 
         assertFalse(primeGen.isPrime(1000));
     }
