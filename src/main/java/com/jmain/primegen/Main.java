@@ -5,6 +5,9 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         try {
+            if (args.length != 2) {
+                throw new Exception("invalid argument count");
+            }
             int range1 = Integer.parseInt(args[0]);
             int range2 = Integer.parseInt(args[1]);
             int testIterations = 1;
@@ -36,6 +39,9 @@ public class Main {
         }
         catch (NumberFormatException e) {
             System.out.println("usage: please only provide integer values as arguments");
+        }
+        catch (Exception e) {
+            System.out.println("usage: please provide two range arguments, Main <range1> <range2>");
         }
     }
 }

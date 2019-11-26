@@ -48,4 +48,18 @@ class MainTest {
 
         assertEquals("There are no prime numbers in the specified range.\n", outContent.toString());
     }
+
+    @Test
+    void testMainOneArg() {
+        Main.main(new String[]{"3"});
+
+        assertEquals("usage: please provide two range arguments, Main <range1> <range2>\n", outContent.toString());
+    }
+
+    @Test
+    void testMainThreeArgs() {
+        Main.main(new String[]{"3", "100", "50000"});
+
+        assertEquals("usage: please provide two range arguments, Main <range1> <range2>\n", outContent.toString());
+    }
 }
